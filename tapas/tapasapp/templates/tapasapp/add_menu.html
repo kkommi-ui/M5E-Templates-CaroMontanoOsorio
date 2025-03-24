@@ -1,45 +1,45 @@
 {% extends 'tapasapp/base.html' %}
 {% load static %}
 
-<div class="container">
 
-{% block sidebar %}
-<div class="row">
-    <ul>
-        <li><a class="navbar-brand mb-0" href="{% url 'view_menu' %}">Back to main</a></li>
-    </ul>
-</div>
-{% endblock %}
-{% block content %}
-    <div class="col-6">
-        <div class="card">
-            <div class="card-header">
-                Type in dish details:
-            </div>
-            <div class="card-body p-3">
-                <form id="login_form" method="POST" action="inside_bootstrapped.html">
-                    <div class="mb-3">
-                        <label for="dishName" class="form-label">Name: </label>
-                        <input type="text" class="form-control" id="dishName">
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="mb-3">
-                                <label for="cookTime" class="form-label">Cook Time: </label>
-                                <input type="number" class="form-control" id="cookTime">
+<div class="container">
+    {% block sidebar %}
+        <div class="col">
+            <ul>
+                <li><a class="navbar-brand mb-0" href="{% url 'view_menu' %}">Back to main</a></li>
+            </ul>
+        </div>
+    {% endblock %}
+    {% block content %}
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    Type in dish details:
+                </div>
+                <div class="card-body p-3">
+                    <form id="login_form" method="POST" action="inside_bootstrapped.html">
+                        <div class="mb-3">
+                            <label for="dishName" class="form-label">Name: </label>
+                            <input type="text" class="form-control" id="dishName">
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="cookTime" class="form-label">Cook Time: </label>
+                                    <input type="number" class="form-control" id="cookTime">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="prepTime" class="form-label">Prep Time: </label>
+                                    <input type="number" class="form-control" id="prepTime">
+                                </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="mb-3">
-                                <label for="prepTime" class="form-label">Prep Time: </label>
-                                <input type="number" class="form-control" id="prepTime">
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-secondary">Add to dishes</button>
-                </form>                
+                        <button type="submit" class="btn btn-secondary">Add to dishes</button>
+                    </form>                
+                </div>
             </div>
         </div>
-    </div>
+    {% endblock %}
 </div>
-{% endblock %}
